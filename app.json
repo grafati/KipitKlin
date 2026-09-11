@@ -8,7 +8,10 @@
     "scheme": "isabiclean",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "config": {
+        "googleMapsApiKey": "AIzaSyD3dQ_sRET8ukcYbjE274CHp2-DO38h11s"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -17,7 +20,12 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyD3dQ_sRET8ukcYbjE274CHp2-DO38h11s"
+        }
+      }
     },
     "web": {
       "output": "static",
@@ -25,6 +33,7 @@
     },
     "plugins": [
       "expo-router",
+      "expo-notifications",
       [
         "expo-splash-screen",
         {
