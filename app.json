@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "isabiclean",
-    "slug": "isabiclean",
+    "name": "kipitklin",
+    "slug": "kipitklin",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "isabiclean",
+    "scheme": "kipitklin",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon",
