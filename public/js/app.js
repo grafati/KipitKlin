@@ -194,6 +194,7 @@ byId("locate-button").addEventListener("click", requestLocation);
 byId("dialog-close").addEventListener("click", () => byId("site-dialog").close());
 byId("report-form").addEventListener("submit", async (event) => {
   event.preventDefault();
+  const reportForm = event.currentTarget;
   const status = byId("report-status");
   const description = byId("description").value.trim();
   const photo = byId("photo").files[0];
@@ -207,7 +208,7 @@ byId("report-form").addEventListener("submit", async (event) => {
     status.textContent = "Uploading photo and saving your report…";
     const photoUrl = await uploadPhoto(smallerPhoto);
     await addDoc(collection(db, "sites"), { title: description.slice(0, 40), description, latitude: currentLocation.latitude, longitude: currentLocation.longitude, photoUrl, reportedBy: currentUser.uid, status: "Reported", createdAt: new Date().toISOString() });
-    event.currentTarget.reset();
+    reportForm.reset();
     try {
       await loadSites();
       status.textContent = "Report submitted — thank you for helping your community.";
