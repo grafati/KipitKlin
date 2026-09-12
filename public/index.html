@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#123c2a" />
+    <meta name="description" content="KipitKlin connects people with local clean-up efforts." />
+    <title>KipitKlin | Cleaner communities, together</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="KipitKlin home"><span aria-hidden="true">♻</span> KipitKlin</a>
+      <nav aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#reports">Reports</a>
+        <a href="#report">Report a site</a>
+        <a href="#activity">My activity</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div>
+          <p class="eyebrow">Community waste reporting</p>
+          <h1>See it. Report it. Clean it.</h1>
+          <p class="hero-copy">KipitKlin connects people with local clean-up efforts. Report an illegal dumping site, volunteer your time, or pledge useful equipment.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#report">Report a site</a>
+            <a class="button secondary" href="#reports">Browse reports</a>
+          </div>
+        </div>
+        <aside class="impact-card" aria-label="Community impact">
+          <p>Community impact</p>
+          <strong id="site-count">—</strong><span> active reports</span>
+          <strong id="volunteer-count">—</strong><span> volunteer sign-ups</span>
+          <strong id="pledge-count">—</strong><span> equipment pledges</span>
+        </aside>
+      </section>
+
+      <section id="reports" class="section">
+        <div class="section-heading">
+          <div><p class="eyebrow">Reported sites</p><h2>Waste reports in the community</h2></div>
+          <button id="locate-button" class="text-button" type="button">Use my location</button>
+        </div>
+        <p id="location-message" class="muted">Location is optional. Reports are shown for everyone.</p>
+        <div id="report-list" class="card-grid" aria-live="polite"><p class="muted">Loading reports…</p></div>
+      </section>
+
+      <section id="report" class="section form-section">
+        <div><p class="eyebrow">Make a report</p><h2>Help keep your area clean</h2><p class="muted">Add a clear description and photo. Your browser will ask for location permission only when you submit.</p></div>
+        <form id="report-form" class="form-card">
+          <label>Description<textarea id="description" required maxlength="500" placeholder="Describe the waste, nearby landmark, and any safety concern."></textarea></label>
+          <label>Photo<input id="photo" type="file" accept="image/*" required /></label>
+          <p class="help">When you submit, your browser will ask for location access so the report can be placed accurately.</p>
+          <button class="button primary" type="submit">Submit report</button>
+          <p id="report-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="activity" class="section">
+        <p class="eyebrow">Your contributions</p><h2>My activity</h2>
+        <div id="activity-list" class="activity-grid"><p class="muted">Loading your activity…</p></div>
+      </section>
+    </main>
+
+    <dialog id="site-dialog" class="dialog"><button id="dialog-close" class="dialog-close" aria-label="Close">×</button><div id="dialog-content"></div></dialog>
+    <footer>Built for cleaner, safer neighbourhoods.</footer>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

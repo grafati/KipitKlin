@@ -1,0 +1,5 @@
+{
+  "buildCommand": "echo Static KipitKlin website - no build required",
+  "outputDirectory": "public",
+  "cleanUrls": true
+}
