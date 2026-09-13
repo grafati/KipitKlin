@@ -38,9 +38,9 @@ body {
 }
 
 .brand {
-  color: var(--purple);
-  font-size: 1.25rem;
   font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--purple);
   text-decoration: none;
 }
 
@@ -79,23 +79,23 @@ main {
 }
 
 .eyebrow {
-  margin: 0 0 8px;
-  color: #6b3fa0;
-  font-size: .73rem;
-  font-weight: 800;
-  letter-spacing: .12em;
   text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 800;
+  font-size: .73rem;
+  color: #6b3fa0;
+  margin: 0 0 8px;
 }
 
 h1,
 h2 {
-  margin: 0 0 16px;
   line-height: 1.08;
+  margin: 0 0 16px;
 }
 
 h1 {
-  max-width: 760px;
   font-size: clamp(2.5rem, 6vw, 5rem);
+  max-width: 760px;
 }
 
 h2 {
@@ -103,31 +103,27 @@ h2 {
 }
 
 .hero-copy {
+  font-size: 1.08rem;
   max-width: 660px;
   color: #4a4356;
-  font-size: 1.08rem;
-}
-
-.hero-actions,
-.dialog-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
 }
 
 .hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
   margin-top: 28px;
 }
 
 .button {
   display: inline-block;
-  padding: 12px 18px;
   border: 0;
   border-radius: 8px;
-  cursor: pointer;
-  font: inherit;
+  padding: 12px 18px;
   font-weight: 750;
   text-decoration: none;
+  cursor: pointer;
+  font: inherit;
 }
 
 .primary {
@@ -185,13 +181,13 @@ h2 {
 }
 
 .text-button {
-  padding: 8px 0;
   border: 0;
   background: none;
+  padding: 8px 0;
   color: var(--purple);
-  cursor: pointer;
   font: inherit;
   font-weight: 750;
+  cursor: pointer;
 }
 
 .card-grid {
@@ -202,9 +198,9 @@ h2 {
 }
 
 .report-card {
-  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 14px;
+  overflow: hidden;
   background: #fff;
   box-shadow: 0 4px 14px #2e11610a;
 }
@@ -221,12 +217,12 @@ h2 {
 
 .badge {
   display: inline-block;
-  padding: 4px 9px;
   border-radius: 99px;
-  background: #fff3cf;
-  color: #765b00;
+  padding: 4px 9px;
   font-size: .72rem;
   font-weight: 750;
+  background: #fff3cf;
+  color: #765b00;
 }
 
 .badge.cleaned {
@@ -247,13 +243,13 @@ h2 {
 
 .card-link {
   margin-top: 14px;
-  padding: 0;
   border: 0;
   background: none;
+  padding: 0;
   color: var(--purple);
-  cursor: pointer;
   font: inherit;
   font-weight: 750;
+  cursor: pointer;
 }
 
 .form-section {
@@ -264,30 +260,29 @@ h2 {
 }
 
 .form-card {
-  padding: 28px;
-  border-radius: 15px;
   background: #fff;
+  border-radius: 15px;
+  padding: 28px;
   box-shadow: 0 6px 20px #3b136110;
 }
 
 label {
   display: block;
-  margin-bottom: 16px;
   font-size: .9rem;
   font-weight: 750;
+  margin-bottom: 16px;
 }
 
 input,
-textarea,
-select {
-  display: block;
+textarea {
   width: 100%;
+  display: block;
   margin-top: 6px;
-  padding: 11px;
   border: 1px solid #c7c0d1;
   border-radius: 8px;
-  background: #fff;
+  padding: 11px;
   font: inherit;
+  background: #fff;
 }
 
 textarea {
@@ -295,9 +290,15 @@ textarea {
   resize: vertical;
 }
 
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
 .help {
-  margin: -5px 0 18px;
   font-size: .85rem;
+  margin: -5px 0 18px;
 }
 
 .form-status {
@@ -333,9 +334,9 @@ textarea {
 
 .dialog {
   width: min(720px, calc(100% - 32px));
-  padding: 0;
   border: 0;
   border-radius: 16px;
+  padding: 0;
   box-shadow: 0 20px 60px #0004;
 }
 
@@ -348,9 +349,9 @@ textarea {
   margin: 12px;
   border: 0;
   background: transparent;
-  cursor: pointer;
   font-size: 2rem;
   line-height: 1;
+  cursor: pointer;
 }
 
 .dialog-body {
@@ -360,38 +361,41 @@ textarea {
 .dialog-photo {
   width: 100%;
   max-height: 290px;
-  border-radius: 10px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .dialog-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
   margin: 24px 0;
 }
 
 .inline-form {
   margin-top: 16px;
   padding: 16px;
-  border-radius: 10px;
   background: #f3eef9;
+  border-radius: 10px;
 }
 
 footer {
+  text-align: center;
   padding: 32px;
   color: var(--muted);
   font-size: .9rem;
-  text-align: center;
 }
 
 @media (max-width: 720px) {
   .site-header {
-    flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    flex-direction: column;
   }
 
   nav {
-    flex-wrap: wrap;
     gap: 14px;
+    flex-wrap: wrap;
   }
 
   .hero,
@@ -406,6 +410,10 @@ footer {
   }
 
   .activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .two-column {
     grid-template-columns: 1fr;
   }
 }
